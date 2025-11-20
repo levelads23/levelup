@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PLATAFORMA VERIFICADA</title>
+  <meta name="description" content="Plataforma verificada. Conexión inmediata vía WhatsApp.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#efeae2;
+      --text:#0b141a;
+      --ok:#20c65a;
+      --btn:#25D366;
+      --btn-text:#ffffff;
+      --maxw:510px;
+      --gap-logo-title:18px;
+      --mt-top:14px;
+      --mb-top:26px;
+      --mt-subtitle:6px;
+      --mb-subtitle:28px;
+      --mb-notice:32px;
+      --mb-btn:36px;
+      --rail-gap:12px;
+      --footer-mt:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow-x:hidden;}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      background:#fefefe;
+    }
+
+    .bg{
+      position:fixed; inset:0; z-index:-1;
+      background:url("wsp-wallpaper.png") repeat;
+      background-size:contain;
+      opacity:0.95;
+    }
+
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:28px 16px 44px;text-align:center;}
+
+    .top{display:flex;flex-direction:column;align-items:center;gap:var(--gap-logo-title);
+      margin-top:var(--mt-top);margin-bottom:var(--mb-top);}
+
+    .logo{width:92px;height:92px;border-radius:50%;overflow:hidden;border:3px solid #fff;}
+    .logo img{width:100%;height:100%;object-fit:cover;}
+
+    .headline{
+      font-weight:800;font-size:20px;line-height:1.16;display:inline-flex;
+      align-items:center;justify-content:center;
+    }
+    .tick{font-size:21px;}
+    .tick.left{margin-right:-3px;}
+    .tick.right{margin-left:-3px;}
+
+    .subtitle{color:var(--ok);font-weight:600;font-size:15px;margin:var(--mt-subtitle) 0 var(--mb-subtitle);}
+
+    .notice{
+      background:#111b21;color:#e8ecef;border-radius:18px;padding:14px 18px;
+      font-size:15px;margin-bottom:var(--mb-notice);
+    }
+
+    .cta{
+      display:block;width:100%;text-decoration:none;text-align:center;
+      background:var(--btn);color:var(--btn-text);
+      font-weight:800;font-size:18px;border-radius:28px;
+      padding:16px 20px;box-shadow:0 8px 20px rgba(37,211,102,.35);
+      margin:0 auto var(--mb-btn);
+    }
+
+    .rail{display:grid;gap:var(--rail-gap);}
+    .pill,.stars{
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      padding:8px 12px;border-radius:14px;font-size:12px;font-weight:800;
+      border:1px solid #dfe7ea;
+    }
+    .pill{background:#e7f8ee;color:#0b3b2c;border-color:#cdeed9;}
+    .stars{background:#eef3f5;color:#0f2e22;}
+    .pill .sq{
+      width:16px;height:16px;border-radius:3px;display:grid;place-items:center;
+      background:#d0f6da;border:1px solid #b1e6c0;color:#0b3b2c;font-size:11px;
+    }
+
+    footer{margin-top:var(--footer-mt);color:#6b7b86;font-size:12px;}
+
+    @media(max-width:420px){
+      .headline{font-size:19px}
+      .subtitle{font-size:14.5px}
+      .cta{font-size:17px;padding:15px 18px}
+    }
+  </style>
+
+  <!-- META PIXEL NUEVO -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src='https://connect.facebook.net/en_US/fbevents.js';s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script');
+    fbq('init', '1816457272568840');
+    fbq('track', 'PageView');
+  </script>
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <div class="wrap">
+    <div class="top">
+      <div class="logo"><img src="logo-truco.png" alt="Logo"></div>
+
+      <div class="headline">
+        <span class="tick left">✅</span><span>PLATAFORMA VERIFICADA</span><span class="tick right">✅</span>
+      </div>
+
+      <div class="subtitle">Casino de Confianza</div>
+    </div>
+
+    <div class="notice">Te estamos conectando con nuestro equipo vía WhatsApp.</div>
+
+    <a id="cta-wsp" class="cta" href="intermedio.html" rel="nofollow noopener">Ir a WhatsApp ahora</a>
+
+    <div class="rail">
+      <div class="pill"><span class="sq">■</span> +10.000 CLIENTES GANANDO todos los días</div>
+      <div class="stars">"Excelente" ★★★★★ Calificación 4.9/5 en Trustpilot</div>
+    </div>
+
+    <footer>© <span id="y"></span> • Todos los derechos reservados</footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('cta-wsp').addEventListener('click',()=>{
+      try{ fbq('trackCustom','Registro',{dest:'intermedio'}) }catch(e){}
+    });
+  </script>
+</body>
+</html>
